@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { NavItem } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -67,6 +67,15 @@ const Navbar = () => {
                 {item.title}
               </Link>
             ))}
+            <a
+              href="https://drive.google.com/file/d/1BQa6mUeSTK3ujd92Dqo_gK7OdLHFZ0ZB/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-sm text-muted-foreground transition-all duration-200 hover:text-primary"
+            >
+              <FileText className="h-4 w-4 mr-1" />
+              Resume
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -102,6 +111,15 @@ const Navbar = () => {
                 {item.title}
               </Link>
             ))}
+            <a
+              href="https://drive.google.com/file/d/1BQa6mUeSTK3ujd92Dqo_gK7OdLHFZ0ZB/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center py-2 text-base text-muted-foreground transition-colors"
+            >
+              <FileText className="h-4 w-4 mr-2" />
+              Resume
+            </a>
           </div>
         </div>
       )}

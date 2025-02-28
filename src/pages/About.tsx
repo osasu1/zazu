@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, FileText, Download } from "lucide-react";
 import { SkillItem, ExperienceItem } from "@/lib/types";
 
 const skills: SkillItem[] = [
@@ -105,6 +105,18 @@ const About = () => {
                 <p className="mt-4 text-xl leading-relaxed text-muted-foreground">
                   I have worked on healthtech, edtech, and cultural tech projects, helping shape solutions that address pressing challenges in Africa and beyond.
                 </p>
+                
+                <div className="mt-6">
+                  <a
+                    href="https://drive.google.com/file/d/1BQa6mUeSTK3ujd92Dqo_gK7OdLHFZ0ZB/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center h-12 px-6 py-0 bg-primary text-primary-foreground rounded-md text-sm font-medium transition-all hover:bg-primary/90"
+                  >
+                    <FileText className="mr-2 h-4 w-4" />
+                    View Full Resume
+                  </a>
+                </div>
               </div>
             </motion.div>
           </section>

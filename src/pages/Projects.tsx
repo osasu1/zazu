@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import { ProjectItem } from "@/lib/types";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, FileText, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const projects: ProjectItem[] = [
@@ -142,18 +142,33 @@ const Projects = () => {
                           ))}
                         </div>
 
-                        <button
-                          onClick={() => toggleProject(project.id)}
-                          className="flex items-center text-sm font-medium mt-2"
-                        >
-                          {expandedProject === project.id ? "Hide Details" : "View Details"}
-                          <ChevronDown 
-                            className={cn(
-                              "ml-1 h-4 w-4 transition-transform",
-                              expandedProject === project.id ? "transform rotate-180" : ""
-                            )}
-                          />
-                        </button>
+                        <div className="flex flex-wrap gap-4">
+                          <button
+                            onClick={() => toggleProject(project.id)}
+                            className="flex items-center text-sm font-medium"
+                          >
+                            {expandedProject === project.id ? "Hide Details" : "View Details"}
+                            <ChevronDown 
+                              className={cn(
+                                "ml-1 h-4 w-4 transition-transform",
+                                expandedProject === project.id ? "transform rotate-180" : ""
+                              )}
+                            />
+                          </button>
+                          
+                          {project.id === "bossomheart" && (
+                            <a
+                              href="https://drive.google.com/file/d/1VrRP4NBVnMPQEWSSMjNtEQrxyD0bajvO/view?usp=sharing"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            >
+                              <FileText className="mr-1 h-4 w-4" />
+                              View Full Case Study PDF
+                              <ExternalLink className="ml-1 h-3 w-3" />
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
