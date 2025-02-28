@@ -37,27 +37,32 @@ const projects: ProjectItem[] = [
     ]
   },
   {
-    id: "gritin-ai",
-    title: "GritinAI Data Analytics Training",
-    shortDescription: "AI-driven data analytics education platform for beginners",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Data Education", "AI", "EdTech"],
+    id: "bossomheart",
+    title: "BossomHeart",
+    shortDescription: "Breast Cancer Support App for Nigerian women",
+    description: [
+      "BossomHeart is a health-tech product aimed at connecting Nigerian women affected by breast cancer to a supportive community, medical consultations, and educational resources.",
+      "For Nigerian women diagnosed with breast cancer, there is a lack of accessible and comprehensive support services. Many women face long waiting times to see doctors, limited access to educational resources tailored to their condition, and a lack of emotional and mental health support systems.",
+      "We built a platform that provides virtual consultations with doctors to bypass long wait times at hospitals, a community forum where women can share experiences and provide emotional support to each other, and educational resources tailored to the Nigerian context, providing users with culturally relevant information about breast cancer care."
+    ],
+    image: "https://images.unsplash.com/photo-1579154341098-e4e158cc7f55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["HealthTech", "Support Community", "Virtual Consultations", "Educational Resources"],
     achievements: [
-      "Mentored over 200+ learners in data analytics and AI concepts.",
-      "Developed a structured curriculum that helps beginners transition into data roles.",
-      "Created an interactive learning environment with real-world projects."
-    ]
-  },
-  {
-    id: "health-tech",
-    title: "Healthcare Monitoring System",
-    shortDescription: "Remote patient monitoring and data analysis platform",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["HealthTech", "IoT", "Data Analytics"],
-    achievements: [
-      "Developed a system that reduced patient readmissions by 23%.",
-      "Implemented predictive analytics to identify at-risk patients.",
-      "Won innovation award at regional healthcare hackathon."
+      "Developed a comprehensive user flow from onboarding to ongoing engagement.",
+      "Created a vibrant, supportive community where women can share experiences.",
+      "Provided seamless access to trusted doctors for virtual consultations.",
+      "Offered easily digestible, localized content on breast cancer, treatment options, and prevention tips."
+    ],
+    challenges: [
+      "User-Centric Design – Understanding user needs and tailoring features accordingly was essential for delivering real value.",
+      "Strategic Prioritization – Using tools like T-shirt sizing and Effort/Value mapping helped focus on what truly matters.",
+      "Localization – Providing culturally relevant content ensures that products resonate with the intended audience."
+    ],
+    futureItems: [
+      "Implement advanced analytics and personalized content recommendations.",
+      "Expand the doctor network to include more specialists.",
+      "Develop offline functionality for users with limited internet access.",
+      "Create multilingual support for various Nigerian languages."
     ]
   }
 ];
