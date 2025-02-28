@@ -9,31 +9,31 @@ const blogPosts: BlogPost[] = [
     title: "Data-Driven Product Evolution",
     excerpt: "How to leverage data analytics to make informed product decisions and drive continuous improvement.",
     url: "https://medium.com/@zazzu",
-    date: "June 10, 2023"
+    date: ""
   },
   {
     title: "The Intersection of Product Management and Data Science",
     excerpt: "Exploring how product managers can work effectively with data scientists to build better products.",
     url: "https://medium.com/@zazzu",
-    date: "April 22, 2023"
+    date: ""
   },
   {
     title: "Cultural Preservation in the Digital Age",
     excerpt: "How technology is helping preserve cultural heritage and artifacts for future generations.",
     url: "https://medium.com/@zazzu",
-    date: "March 15, 2023"
+    date: ""
   },
   {
     title: "Agile Methodologies for Non-Technical Teams",
     excerpt: "Adapting Agile practices for teams outside of software development to improve productivity and collaboration.",
     url: "https://medium.com/@zazzu",
-    date: "February 3, 2023"
+    date: ""
   },
   {
     title: "Building Products with Impact in Africa",
     excerpt: "Strategies for creating technology solutions that address real needs in African markets.",
     url: "https://medium.com/@zazzu",
-    date: "January 12, 2023"
+    date: ""
   }
 ];
 
@@ -85,9 +85,6 @@ const Blog = () => {
                   >
                     <div className="flex flex-col gap-3">
                       <div className="space-y-1">
-                        <p className="text-sm text-muted-foreground">
-                          {post.date}
-                        </p>
                         <h2 className="text-2xl font-medium group-hover:text-primary transition-colors">
                           {post.title}
                         </h2>

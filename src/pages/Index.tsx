@@ -16,14 +16,23 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-2"
+                className="flex flex-col md:flex-row gap-8 items-center"
               >
-                <div className="inline-block bg-secondary/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-secondary-foreground mb-4">
-                  Product Manager & Data Enthusiast
+                <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden flex-shrink-0 border-4 border-secondary">
+                  <img 
+                    src="/lovable-uploads/5ce40ece-3bfd-446a-8fae-963f36d8d989.png" 
+                    alt="Osasu Omangbon" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight">
-                  Building impactful solutions at the intersection of Product, Data, and Technology
-                </h1>
+                <div className="space-y-2">
+                  <div className="inline-block bg-secondary/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-secondary-foreground mb-4">
+                    Product Manager & Data Enthusiast
+                  </div>
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight">
+                    Building impactful solutions at the intersection of Product, Data, and Technology
+                  </h1>
+                </div>
               </motion.div>
 
               <motion.p
