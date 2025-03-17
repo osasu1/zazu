@@ -27,7 +27,6 @@ export interface ProjectItem {
   achievements?: string[];
   challenges?: string[];
   futureItems?: string[];
-  caseStudyLink?: string;
 }
 
 export interface BlogPost {
@@ -35,5 +34,4 @@ export interface BlogPost {
   excerpt: string;
   url: string;
   date: string;
-  image?: string;
 }
