@@ -54,6 +54,33 @@
   }
 }
 
+@layer components {
+  /* Netflix-inspired content rows */
+  .content-row {
+    @apply py-8 relative overflow-hidden;
+  }
+
+  .content-row-title {
+    @apply text-xl md:text-2xl font-medium mb-4 px-4 sm:px-6 md:px-8;
+  }
+
+  .content-slider {
+    @apply flex overflow-x-auto snap-x snap-mandatory pb-4 px-4 sm:px-6 md:px-8 gap-4 scrollbar-none;
+  }
+
+  .content-card {
+    @apply flex-none snap-start w-[280px] transition-transform duration-300 transform hover:scale-105 overflow-hidden rounded-md;
+  }
+
+  .netflix-card {
+    @apply relative overflow-hidden rounded-md bg-card shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .netflix-card-content {
+    @apply absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/90 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100;
+  }
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from { opacity: 0; }
