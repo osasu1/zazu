@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -93,17 +92,5 @@ export default {
 			}
 		}
 	},
-	plugins: [
-		require("tailwindcss-animate"),
-		function({ addUtilities }) {
-			addUtilities({
-				'.scrollbar-none': {
-					'scrollbar-width': 'none',
-					'&::-webkit-scrollbar': {
-						display: 'none',
-					},
-				},
-			})
-		}
-	],
+	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
