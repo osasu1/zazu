@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { Certificate } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Award, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 // Product-related certificates with local images
 const certificates: Certificate[] = [
@@ -45,10 +46,13 @@ interface CertificatesProps {
 const Certificates = ({ className }: CertificatesProps) => {
   return (
     <div className={className}>
-      <h2 className="text-3xl font-medium tracking-tight mb-6">
-        Certifications
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex items-center gap-3 mb-6">
+        <Award className="h-7 w-7 text-primary/80" />
+        <h2 className="text-3xl font-medium tracking-tight">
+          Certifications
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
         {certificates.map((cert, index) => (
           <motion.div
             key={index}
@@ -56,12 +60,15 @@ const Certificates = ({ className }: CertificatesProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            className="h-full"
           >
-            <Card className="h-full hover:border-primary/20 transition-colors">
-              <CardContent className="p-5 flex flex-col h-full">
-                <div className="flex items-start gap-3 mb-3">
+            <Card className="h-full overflow-hidden border border-primary/10 hover:border-primary/30 transition-colors shadow-sm hover:shadow-md">
+              <CardContent className="p-5 flex flex-col h-full relative">
+                {/* Certificate Header */}
+                <div className="flex items-start gap-3 mb-4">
                   {cert.image && (
-                    <div className="flex-shrink-0 h-12 w-12 rounded-md overflow-hidden bg-secondary">
+                    <div className="flex-shrink-0 h-14 w-14 rounded-full overflow-hidden bg-secondary/30 p-2 border border-secondary">
                       <img 
                         src={cert.image} 
                         alt={cert.issuer}
@@ -70,15 +77,26 @@ const Certificates = ({ className }: CertificatesProps) => {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
+                    <Badge variant="secondary" className="mb-1 font-normal">
+                      {cert.issuer}
+                    </Badge>
                     <h3 className="text-lg font-medium line-clamp-2">{cert.title}</h3>
-                    <p className="text-muted-foreground text-sm">{cert.issuer}</p>
                   </div>
                 </div>
-                <div className="mt-auto">
-                  <p className="text-sm text-muted-foreground">
-                    Issued: {cert.issueDate}
-                    {cert.expiryDate && ` • Expires: ${cert.expiryDate}`}
-                  </p>
+                
+                {/* Certificate Details */}
+                <div className="mt-auto space-y-3">
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <CheckCircle className="h-4 w-4 text-primary/70" />
+                    <span>Issued: {cert.issueDate}</span>
+                  </div>
+                  
+                  {cert.credentialId && (
+                    <div className="text-sm text-muted-foreground">
+                      ID: <span className="font-mono text-xs bg-secondary/50 px-1.5 py-0.5 rounded">{cert.credentialId}</span>
+                    </div>
+                  )}
+                  
                   {cert.credentialUrl && (
                     <a
                       href={cert.credentialUrl}
@@ -89,6 +107,11 @@ const Certificates = ({ className }: CertificatesProps) => {
                       View credential <ExternalLink className="ml-1 h-3.5 w-3.5" />
                     </a>
                   )}
+                </div>
+                
+                {/* Decorative elements for the fun/doodle aesthetic */}
+                <div className="absolute top-0 right-0 w-20 h-20 -mr-5 -mt-5 opacity-5 rotate-12">
+                  <Award className="w-full h-full" />
                 </div>
               </CardContent>
             </Card>
