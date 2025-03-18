@@ -1,53 +1,39 @@
-
 import { motion } from "framer-motion";
 import { Certificate } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 
-// These are certificates extracted from the provided LinkedIn profile and resume
+// Product-related certificates
 const certificates: Certificate[] = [
   {
-    title: "Google Project Management",
-    issuer: "Google",
-    issueDate: "April 2022",
-    credentialId: "TGPNBJ5RVEHZ",
-    credentialUrl: "https://www.credly.com/badges/a1ca94e9-d2cc-4bae-b875-dc524fcd16c6/public_url",
-    image: "https://media.licdn.com/dms/image/C560BAQGiX5xl8t40Yg/company-logo_100_100/0/1626909376942/google_logo?e=1717027200&v=beta&t=KgnW2Kn_jOqR0jTBbxnQ04yyJKBk2t6u8jkHkZ6i1wI"
-  },
-  {
-    title: "Data Analytics",
-    issuer: "Google",
-    issueDate: "January 2022",
-    credentialId: "KTN2CW7GJMMK",
-    credentialUrl: "https://www.credly.com/badges/7aafcc64-e0a9-4c6e-8d91-6f9a8c1d1df6/public_url",
-    image: "https://media.licdn.com/dms/image/C560BAQGiX5xl8t40Yg/company-logo_100_100/0/1626909376942/google_logo?e=1717027200&v=beta&t=KgnW2Kn_jOqR0jTBbxnQ04yyJKBk2t6u8jkHkZ6i1wI"
-  },
-  {
-    title: "Introduction to Generative AI",
-    issuer: "Google Cloud",
-    issueDate: "November 2023",
-    credentialUrl: "https://www.cloudskillsboost.google/public_profiles/f0551c71-2cd3-4aad-8b71-3a2ec84c2d68/badges/4653200",
-    image: "https://media.licdn.com/dms/image/C4D0BAQECcGlRHedmPw/company-logo_100_100/0/1630581234252/google_cloud_logo?e=1717027200&v=beta&t=I79XTjBE60qpSfPFnZ3mHtcXZBKlpw9vMJ_7ByAGa08"
-  },
-  {
-    title: "Foundations of Artificial Intelligence",
-    issuer: "CITP, Africa Blockchain Institute",
-    issueDate: "May 2023",
-    image: "https://media.licdn.com/dms/image/C4D0BAQHm5bYK6emQSg/company-logo_100_100/0/1630642005788/center_for_innovative_technology_policy_logo?e=1717027200&v=beta&t=ejKzOcg6cBLWBTBfYUDgVyAx08asPHgWK99LPAJFrSo"
-  },
-  {
-    title: "Cloud Digital Leader",
-    issuer: "Google Cloud",
-    issueDate: "December 2022",
-    credentialId: "7h4-FYFQy8M3",
-    credentialUrl: "https://www.credential.net/7h4-FYFQy8M3",
-    image: "https://media.licdn.com/dms/image/C4D0BAQECcGlRHedmPw/company-logo_100_100/0/1630581234252/google_cloud_logo?e=1717027200&v=beta&t=I79XTjBE60qpSfPFnZ3mHtcXZBKlpw9vMJ_7ByAGa08"
-  },
-  {
-    title: "Product Management Training",
+    title: "Product Masterclass: How to Build Digital Products",
     issuer: "Product School",
-    issueDate: "October 2020",
+    issueDate: "April 2020",
+    credentialId: "cert_hlg71jy1",
     image: "https://media.licdn.com/dms/image/C4E0BAQEXrIU-e6_wVA/company-logo_100_100/0/1630629329588/product_school_logo?e=1717027200&v=beta&t=HLYS92mApkZzSZ-nnT24QpnLQn7P0zSUq9VKlI7-IFA"
+  },
+  {
+    title: "Introduction to Software Product Management",
+    issuer: "Coursera",
+    issueDate: "April 2020",
+    credentialId: "4PYJLF4KYX5W",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/4PYJLF4KYX5W",
+    image: "https://media.licdn.com/dms/image/C4D0BAQHiXudNP8-bGA/company-logo_100_100/0/1519952238242/coursera_logo?e=1717027200&v=beta&t=Y_EvYDQYd3OHjwvDmP0yzMtE8yt0TsPEXVMcYR-b9FQ"
+  },
+  {
+    title: "Brand and Product Management",
+    issuer: "Coursera",
+    issueDate: "March 2021",
+    credentialId: "Y8HVH5GHSE3H",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/Y8HVH5GHSE3H",
+    image: "https://media.licdn.com/dms/image/C4D0BAQHiXudNP8-bGA/company-logo_100_100/0/1519952238242/coursera_logo?e=1717027200&v=beta&t=Y_EvYDQYd3OHjwvDmP0yzMtE8yt0TsPEXVMcYR-b9FQ"
+  },
+  {
+    title: "Technical Product Management",
+    issuer: "LinkedIn",
+    issueDate: "July 2022",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/1afb21ee837b1d8d7d5dff8b0e7c8baae750db41b48d984bd453106a312ed1d2",
+    image: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831589865/linkedin_logo?e=1717027200&v=beta&t=Yq_jw1jLzrA12WawQGQ7YDCYzJAHbP4JXcZ2D69nnRE"
   }
 ];
 

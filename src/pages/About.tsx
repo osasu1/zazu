@@ -4,6 +4,7 @@ import PageTransition from "@/components/PageTransition";
 import { CheckCircle, FileText } from "lucide-react";
 import { SkillItem, ExperienceItem } from "@/lib/types";
 import Certificates from "@/components/Certificates";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const skills: SkillItem[] = [
   {
@@ -96,9 +97,17 @@ const About = () => {
               <div className="inline-block bg-secondary/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-secondary-foreground mb-2">
                 About Me
               </div>
-              <h1 className="text-4xl md:text-5xl font-medium tracking-tight">
-                Who I Am
-              </h1>
+              <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <h1 className="text-4xl md:text-5xl font-medium tracking-tight">
+                  Who I Am
+                </h1>
+                <div className="flex-shrink-0">
+                  <Avatar className="h-32 w-32 border-2 border-primary/20">
+                    <AvatarImage src="/lovable-uploads/c970f03e-3385-4f6c-98bf-b19988559c2a.png" alt="Portrait" className="object-cover" />
+                    <AvatarFallback>OM</AvatarFallback>
+                  </Avatar>
+                </div>
+              </div>
               <div className="max-w-3xl">
                 <p className="text-xl leading-relaxed text-muted-foreground">
                   With a background in Computer Science and extensive experience in Product & Project Management, I specialize in leading teams, driving innovation, and leveraging data for impactful decision-making.
