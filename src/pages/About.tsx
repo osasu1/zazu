@@ -110,10 +110,16 @@ const About = () => {
               </div>
               <div className="max-w-3xl">
                 <p className="text-xl leading-relaxed text-muted-foreground">
-                  With a background in Computer Science and extensive experience in Product & Project Management, I specialize in leading teams, driving innovation, and leveraging data for impactful decision-making.
+                  I am Osasu Omangbon, a Product and Project Manager who thrives at the intersection of strategy, execution, and creativity building products that don't just exist but make a lasting impact.
                 </p>
                 <p className="mt-4 text-xl leading-relaxed text-muted-foreground">
-                  I have worked on healthtech, edtech, and cultural tech projects, helping shape solutions that address pressing challenges in Africa and beyond.
+                  At Afroart Studias, I spearheaded the development of an online marketplace that elevated African 3D art to a global stage, empowering artisans and illuminating their craft on Sketchfab. At GritinAI, I championed education and training, guiding aspiring data professionals by demystifying complex concepts and nurturing beginners into skilled analysts and AI practitioners. Because true innovation hinges on people who embrace and evolve with technology.
+                </p>
+                <p className="mt-4 text-xl leading-relaxed text-muted-foreground">
+                  With a footprint in health tech, edtech, and cultural tech, I shape solutions that address real-world challenges across Africa and beyond. Whether I'm steering product vision, orchestrating training programs, transforming data into actionable insights, or weaving compelling narratives, I bring disciplined execution, a storyteller's perspective, and a dash of creative flair.
+                </p>
+                <p className="mt-4 text-xl leading-relaxed text-muted-foreground">
+                  When I'm not refining strategies or launching initiatives, you'll find me exploring startup trends, leveling up in video games, or unraveling a gripping K-drama twist. Staying inspired keeps me sharp. Let's craft something extraordinary together. 🚀
                 </p>
                 
                 <div className="mt-6">

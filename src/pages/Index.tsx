@@ -19,10 +19,10 @@ const Index = () => {
                 className="space-y-2"
               >
                 <div className="inline-block bg-secondary/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-secondary-foreground mb-4">
-                  Product Manager & Data Enthusiast
+                  Product Manager | Project Manager | Data Enthusiast | Tech Innovator
                 </div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight">
-                  Bridging technology and human needs—one product at a time.
+                  Bridging Tech and People: Shaping Solutions with Data, Stories, and a Dash of Joy.
                 </h1>
               </motion.div>
 
@@ -32,7 +32,7 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl text-muted-foreground max-w-2xl"
               >
-                I am a data-driven Product and Project Manager with a strong background in technology, healthcare, and education. My passion lies in solving complex problems through structured processes, data insights, and scalable technology solutions.
+                Greetings! I'm Osasu Omangbon, a builder of bridges between technology and people. From shaping global art marketplaces to guiding data-driven innovation, I turn ideas into impact with a storyteller's heart and a strategist's mind. Ready to create what's next?
               </motion.p>
 
               <motion.div
