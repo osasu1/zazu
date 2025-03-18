@@ -1,16 +1,17 @@
+
 import { motion } from "framer-motion";
 import { Certificate } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 
-// Product-related certificates
+// Product-related certificates with local images
 const certificates: Certificate[] = [
   {
     title: "Product Masterclass: How to Build Digital Products",
     issuer: "Product School",
     issueDate: "April 2020",
     credentialId: "cert_hlg71jy1",
-    image: "https://media.licdn.com/dms/image/C4E0BAQEXrIU-e6_wVA/company-logo_100_100/0/1630629329588/product_school_logo?e=1717027200&v=beta&t=HLYS92mApkZzSZ-nnT24QpnLQn7P0zSUq9VKlI7-IFA"
+    image: "/lovable-uploads/8199ea92-dd9a-4b0a-8e4b-82b7e7f84e05.png"
   },
   {
     title: "Introduction to Software Product Management",
@@ -18,7 +19,7 @@ const certificates: Certificate[] = [
     issueDate: "April 2020",
     credentialId: "4PYJLF4KYX5W",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/4PYJLF4KYX5W",
-    image: "https://media.licdn.com/dms/image/C4D0BAQHiXudNP8-bGA/company-logo_100_100/0/1519952238242/coursera_logo?e=1717027200&v=beta&t=Y_EvYDQYd3OHjwvDmP0yzMtE8yt0TsPEXVMcYR-b9FQ"
+    image: "/lovable-uploads/488eeaac-a072-4e6f-9839-1d25d0f5c00f.png"
   },
   {
     title: "Brand and Product Management",
@@ -26,14 +27,14 @@ const certificates: Certificate[] = [
     issueDate: "March 2021",
     credentialId: "Y8HVH5GHSE3H",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/Y8HVH5GHSE3H",
-    image: "https://media.licdn.com/dms/image/C4D0BAQHiXudNP8-bGA/company-logo_100_100/0/1519952238242/coursera_logo?e=1717027200&v=beta&t=Y_EvYDQYd3OHjwvDmP0yzMtE8yt0TsPEXVMcYR-b9FQ"
+    image: "/lovable-uploads/488eeaac-a072-4e6f-9839-1d25d0f5c00f.png"
   },
   {
     title: "Technical Product Management",
     issuer: "LinkedIn",
     issueDate: "July 2022",
     credentialUrl: "https://www.linkedin.com/learning/certificates/1afb21ee837b1d8d7d5dff8b0e7c8baae750db41b48d984bd453106a312ed1d2",
-    image: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831589865/linkedin_logo?e=1717027200&v=beta&t=Yq_jw1jLzrA12WawQGQ7YDCYzJAHbP4JXcZ2D69nnRE"
+    image: "/lovable-uploads/ee38fce5-1aa3-4e26-95e1-c57d8f43c84d.png"
   }
 ];
 
@@ -64,7 +65,7 @@ const Certificates = ({ className }: CertificatesProps) => {
                       <img 
                         src={cert.image} 
                         alt={cert.issuer}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     </div>
                   )}
