@@ -1,8 +1,9 @@
 
 import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
-import { CheckCircle, FileText, Download } from "lucide-react";
+import { CheckCircle, FileText } from "lucide-react";
 import { SkillItem, ExperienceItem } from "@/lib/types";
+import Certificates from "@/components/Certificates";
 
 const skills: SkillItem[] = [
   {
@@ -168,6 +169,11 @@ const About = () => {
                 </p>
               </motion.div>
             </div>
+          </section>
+
+          {/* Certificates Section */}
+          <section className="py-16 border-t border-border/30">
+            <Certificates />
           </section>
 
           {/* Experience Section */}

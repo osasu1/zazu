@@ -34,4 +34,15 @@ export interface BlogPost {
   excerpt: string;
   url: string;
   date: string;
+  image?: string;
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  issueDate: string;
+  expiryDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  image?: string;
 }
