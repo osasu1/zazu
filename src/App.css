@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,15 +6,131 @@
   text-align: center;
 }
 
+/* Fun doodle-inspired decorations */
+.doodle-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.doodle-arrow {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.doodle-star {
+  position: absolute;
+  transform: rotate(15deg);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.doodle-squiggle {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Playful hover effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+  transform: rotate(2deg);
+}
+
+/* Fun animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Professional accents */
+.gradient-text {
+  background: linear-gradient(135deg, #333 0%, #888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtle-shadow {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Doodle underline */
+.doodle-underline {
+  position: relative;
+}
+
+.doodle-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='2' viewBox='0 0 100 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1C10 1 10 0.5 20 0.5C30 0.5 30 1.5 40 1.5C50 1.5 50 0 60 0C70 0 70 1 80 1C90 1 90 0.5 100 0.5' stroke='rgba(0,0,0,0.3)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 100px 2px;
+  background-repeat: repeat-x;
+}
+
+/* Logo and animation resets */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }

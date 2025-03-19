@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Certificate } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Award, CheckCircle } from "lucide-react";
+import { ExternalLink, Award, CheckCircle, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 // Product-related certificates with local images
@@ -46,11 +46,15 @@ interface CertificatesProps {
 const Certificates = ({ className }: CertificatesProps) => {
   return (
     <div className={className}>
-      <div className="flex items-center gap-3 mb-6">
+      <div className="flex items-center gap-3 mb-8 relative">
+        <div className="absolute -left-4 -top-4 text-primary/10">
+          <Sparkles className="h-12 w-12 rotate-12" />
+        </div>
         <Award className="h-7 w-7 text-primary/80" />
         <h2 className="text-3xl font-medium tracking-tight">
           Certifications
         </h2>
+        <div className="ml-2 h-1 w-20 bg-gradient-to-r from-primary/20 to-primary/5 rounded-full"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
         {certificates.map((cert, index) => (
@@ -63,12 +67,25 @@ const Certificates = ({ className }: CertificatesProps) => {
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
             className="h-full"
           >
-            <Card className="h-full overflow-hidden border border-primary/10 hover:border-primary/30 transition-colors shadow-sm hover:shadow-md">
+            <Card className="h-full overflow-hidden border border-primary/10 hover:border-primary/30 transition-colors shadow-sm hover:shadow-md relative">
+              {/* Doodle accent element */}
+              <div className="absolute top-0 right-0 w-20 h-20 -mr-5 -mt-5 opacity-5 rotate-12">
+                <Award className="w-full h-full" />
+              </div>
+              
+              {/* Squiggly line decoration */}
+              <div className="absolute bottom-2 left-0 right-0 h-[3px] mx-6 opacity-10">
+                <svg width="100%" height="100%" viewBox="0 0 400 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1.5C50 1.5 50 2.5 100 2.5C150 2.5 150 0.5 200 0.5C250 0.5 250 2.5 300 2.5C350 2.5 350 1.5 400 1.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
+                </svg>
+              </div>
+              
               <CardContent className="p-5 flex flex-col h-full relative">
                 {/* Certificate Header */}
                 <div className="flex items-start gap-3 mb-4">
                   {cert.image && (
-                    <div className="flex-shrink-0 h-14 w-14 rounded-full overflow-hidden bg-secondary/30 p-2 border border-secondary">
+                    <div className="flex-shrink-0 h-14 w-14 rounded-full overflow-hidden bg-secondary/30 p-2 border border-secondary relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-30 rounded-full"></div>
                       <img 
                         src={cert.image} 
                         alt={cert.issuer}
@@ -102,16 +119,12 @@ const Certificates = ({ className }: CertificatesProps) => {
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                      className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors relative group"
                     >
                       View credential <ExternalLink className="ml-1 h-3.5 w-3.5" />
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                     </a>
                   )}
-                </div>
-                
-                {/* Decorative elements for the fun/doodle aesthetic */}
-                <div className="absolute top-0 right-0 w-20 h-20 -mr-5 -mt-5 opacity-5 rotate-12">
-                  <Award className="w-full h-full" />
                 </div>
               </CardContent>
             </Card>

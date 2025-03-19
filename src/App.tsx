@@ -22,7 +22,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen relative overflow-hidden">
+          {/* Decorative background elements for the doodle aesthetic */}
+          <div className="fixed inset-0 pointer-events-none z-[-1] opacity-[0.03]">
+            <div className="absolute top-20 right-20 w-64 h-64 rounded-full border-8 border-dashed border-primary rotate-[30deg]"></div>
+            <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full border-8 border-dotted border-primary rotate-[-20deg]"></div>
+            <div className="absolute top-1/4 left-1/3 w-72 h-24 border-4 border-primary rotate-[10deg]"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-32 h-32 border-4 border-primary rounded-full"></div>
+            <div className="absolute top-2/3 left-2/3 w-48 h-16 border-2 border-primary rotate-[-5deg]"></div>
+          </div>
+          
           <Navbar />
           <main className="flex-grow">
             <AnimatePresence mode="wait">
