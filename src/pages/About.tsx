@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import { CheckCircle, FileText } from "lucide-react";
@@ -12,8 +11,16 @@ const skills: SkillItem[] = [
     description: "Crafting product visions, roadmaps, and execution plans that deliver value to users and business goals."
   },
   {
+    title: "Project Management & Team Leadership",
+    description: "Planning, executing, and closing projects efficiently while managing resources, timelines, and stakeholder expectations."
+  },
+  {
     title: "Agile & Scrum Methodologies",
     description: "Leading teams through Agile workflows to deliver iterative, high-quality solutions that adapt to changing needs."
+  },
+  {
+    title: "Risk Management & Issue Resolution",
+    description: "Identifying potential roadblocks, developing mitigation strategies, and resolving issues to keep projects on track."
   },
   {
     title: "Data Analytics & Insights",
@@ -26,6 +33,10 @@ const skills: SkillItem[] = [
   {
     title: "Growth & Go-to-Market Strategy",
     description: "Developing strategies to launch products, acquire users, and scale solutions for maximum impact."
+  },
+  {
+    title: "Resource Allocation & Budget Management",
+    description: "Optimizing team performance and financial resources to deliver projects efficiently and within budget constraints."
   }
 ];
 
