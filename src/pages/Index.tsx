@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -22,7 +21,7 @@ const Index = () => {
                   Product Manager | Project Manager | Data Enthusiast | Tech Innovator
                 </div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight">
-                  Bridging Tech and People: Shaping Solutions with Data, Stories, and a Dash of Joy.
+                  Bridging Tech and People: Shaping Solutions that impacts users, one product at a time.
                 </h1>
               </motion.div>
 
